@@ -1,4 +1,4 @@
-# Q&A Chatbot
+# Q&A Chat application
 from dotenv import load_dotenv
 
 load_dotenv()  # take environment variables from .env.
@@ -28,7 +28,7 @@ def get_gemini_response(question):
     response = model.generate_content(question)
     return response.text
 
-##initialize our streamlit app
+# streamlit app configuration
 
 st.set_page_config(page_title="Q&A Demo")
 
@@ -38,7 +38,7 @@ input=st.text_input("Input: ",key="input")
 
 submit=st.button("Ask the question")
 
-## When ask button is clicked
+# If submit button is clicked
 
 if submit:
     
